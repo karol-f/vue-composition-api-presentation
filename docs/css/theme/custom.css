@@ -343,6 +343,10 @@ body {
   left: -12%;
 }
 
+.reveal .slides .usageSlide img {
+    max-width: 50%;
+}
+
 .reveal .slides .three-header {
   display: flex;
   justify-content: space-between;
