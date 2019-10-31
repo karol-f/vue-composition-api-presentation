@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Vue Composition API</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>
+
+	<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section data-background="img/slide_logo_inspired.png" class="fill intro">
+				<img src="img/slide_intro.png" class="clean" />
+				<h2>Vue Composition API</h2>
+			</section>
+
+			<section data-background="img/slide_three.jpg" class="fill">
+				<h2 class="three-header"><span>Why?</span><span>How?</span><span>Usage</span></h2>
+			</section>
+			<section data-background="img/slide_organization.jpg" class="fill">
+				<h1 class="watermark"><strong>Why?</strong></h1>
+				<h2>Code organization</h2>
+			</section>
+			<section data-background="img/slide_organization.jpg" class="fill">
+				<img src="img/slide_organization_folders.png" class="clean" />
+				<h4>How do you organize files?</h4>
+			</section>
+			<section data-background="img/slide_organization.jpg" class="fill">
+				<img src="img/slide_organization_vue.png" class="clean" />
+				<h4>Code Organization by type vs by logic</h4>
+			</section>
+			<section data-background="img/slide_reuse.jpg" class="fill">
+				<h1 class="watermark right"><strong>Why?</strong></h1>
+				<h2>Logic reuse</h2>
+			</section>
+			<section data-background="img/slide_reuse.jpg" class="fill mindmapWhy">
+				<h1 class="watermark right"><strong>Why?</strong></h1>
+				<img src="img/slide_reuse_mindmap.png" class="clean" />
+			</section>
+
+			<section data-background="img/slide_how_extract.jpg" class="fill howImport">
+				<h1 class="watermark right"><strong>How?</strong></h1>
+				<br />
+				<h3>Vue's core capabilities</h3>
+				<h3>exposed as standalone functions</h3>
+				<br />
+				<br />
+			</section>
+			<section data-background="img/slide_how_extract.jpg" class="fill howImport">
+				<h1 class="watermark right"><strong>How?</strong></h1>
+				<br />
+				<img src="img/slide_how_code_import.jpg" class="clean" />
+			</section>
+			<section data-background="img/slide_how_setup.jpg" class="fill howSetup">
+				<h3>setup() function usage</h3>
+				<img src="img/slide_how_code_setup.jpg" class="clean" />
+			</section>
+
+			<section data-background="img/slide_logo_inspired.png" class="fill usageSlide">
+				<img src="img/slide_intro.png" class="clean" />
+				<h4>github.com/karol-f/vue-composition-api-comparison</h4>
+			</section>
+		</div>
+
+	</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'zoom', // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+      window.addEventListener("mousedown", handleClick, false);
+      window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
+
+      function handleClick(e) {
+        e.preventDefault();
+        if(e.button === 0) Reveal.next();
+        if(e.button === 2) Reveal.prev();
+      }
+		</script>
+
+	</body>
+</html>
